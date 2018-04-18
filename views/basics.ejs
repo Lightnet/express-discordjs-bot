@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/sioclient.js"></script>
 </head>
 <body>
     <a href="/login">Login</a>
-    <p>Weclome to bot management!</p>
-    
+    <p>Welcome <% if(user) {%><%= user %><% } %>, bot management for controls!</p>
 </body>
 </html>

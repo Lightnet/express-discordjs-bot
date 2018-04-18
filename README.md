@@ -2,6 +2,12 @@
 
 # Information:
  Very simple setup using Express and Discordjs for https://glitch.com/
+ 
+ It is design for simple template prototype test.
+ 
+ https://glitch.com/edit/#!/lemon-hallway 
+ 
+ Test build but note need API and Bot key to work.
 
 # Tips:
  * https://discordapp.com/developers/applications/me

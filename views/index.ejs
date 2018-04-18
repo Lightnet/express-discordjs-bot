@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/sioclient.js"></script>
+    <script>
+    function setGuild(){
+        let guild = document.getElementById("guilds").value;
+        document.getElementById("wdiscord").src=`https://discordapp.com/widget?id=${guild}&theme=dark`;
+    }
+    </script>
 </head>
 <body>
     <a href="/logout">Logout</a>
-    <p>Weclome bot management for controls!</p>
+    <p>Welcome <% if(user) {%><%= user.username %><% } %>, bot management for controls!</p>
+
+    <label>Guilds</label>
+    <br>
+    <select id="guilds" class=""  onclick="setGuild()">
+        <% user.guilds.forEach(function(guild) { %>
+            <option class="" value="<%=guild.id%>"> <%= guild.name %> </option>
+        <% }) %>
+    </select>
+    <br>
+    <iframe id="wdiscord" src="" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
 </body>
 </html>
