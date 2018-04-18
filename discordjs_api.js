@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const DISCORDBOTTOKEN = process.env.DISCORDBOTTOKEN;
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -11,4 +12,4 @@ client.on('message', msg => {
   }
 });
 
-client.login('MjM5ODM1NzY4MzAwNzY1MTg0.DbkKeQ.qblduMJRHJWgyH_9um5hwKJUqVA');
+client.login(DISCORDBOTTOKEN);
